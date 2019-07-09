@@ -1,0 +1,17 @@
+<h1>Edit Product</h1>
+
+<div class="edd">
+<%= form_for @product do |form|%>
+<h3><%= form.label :name %></h3>
+	<%= form.text_field :name %>
+	<br>
+	<h3><%= form.label :descriptiom %></h3>
+	<%= form.text_area :description %>
+	<br>
+	<h3><%= form.label :price %></h3>
+	<%= form.text_field :price %>
+	<br>
+	<%= form.submit 'SAVE CHANGES' %>
+<% end %>
+
+</div>
