@@ -2,6 +2,9 @@
 
 <div class="edd">
 <%= form_for @product do |form|%>
+<h3><%= form.label :image %></h3>
+	<%= form.text_field :image %>
+	<br>
 <h3><%= form.label :name %></h3>
 	<%= form.text_field :name %>
 	<br>

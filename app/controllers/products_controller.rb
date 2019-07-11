@@ -1,6 +1,8 @@
 class ProductsController < ApplicationController
 
-http_basic_authenticate_with name: "wearenoobs", password: "12345" , except: [:index , :show]
+# http_basic_authenticate_with name: "wearenoobs", password: "12345" , except: [:index , :show]
+	before_action :authenticate_user!
+	
 
 	def index
 		@products = Product.all

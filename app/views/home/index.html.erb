@@ -1,2 +1,24 @@
-<h1>Home</h1>
+<h1 style="text-align:center; color:red">Home</h1>
+<hr>
+<h2 style="text-align:center; color:red">Welcome to Perfection</h2>
+<hr>
+
+<div class="row">
+	<% @products.each do |product|%>
+		<div class="col-lg-4 col-md-6 mb-4">
+			<div class="card h-100">
+				<%= image_tag(product.image, class: "card-img-top",  style: "width:100px; height:150px; margin:auto;") unless product.image.nil? %>
+				<div class="card-body">
+					<h4><%=product.name%></h4>
+					<h5><%=product.price %> USD</h5>
+					<p class ="card-text"> <%=product.description%></p>
+				</div>
+				<div class="card-footer">
+					<%= link_to 'Add to cart', cart_add_path(product:product.id) , class:'btn btn-primary'%>
+					</div>
+			</div>
+
+		</div>
+	<% end %>
+</div>
 

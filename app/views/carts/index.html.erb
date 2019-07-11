@@ -1,0 +1,38 @@
+
+
+<div class="row">
+<hr>
+<h1 style="text-align:center;color:red">Cart</h1>
+<hr>
+<table class="table">
+	<thead>
+		<tr>
+			<th scope="col">No.</th>
+			<th scope="col">Product Name</th>
+			<th scope="col">Price</th>
+			<th scope="col">Actions</th>
+
+		</tr>
+	</thead>
+	<tbody>
+		<% @cart_items.each_with_index do |cart_item, index| %>
+			<tr>
+				<td scope="row"><%= index + 1 %></td>
+				<td><%= cart_item.product.name %></td>
+				<td><%= cart_item.product.price %></td>
+				<td> 
+					<%= link_to 'Delete', cart_item, method: :delete, data: { confirm: 'Are you sure?' } %>
+						
+					</td>
+			</tr>
+			<%end%>
+			<tr>
+				<td scope = "row"></td>
+				<td><strong>Total:</strong></td>
+				<td><strong> <%= @cart.total %></strong></td>
+				<td></td>
+			</tr>
+
+	</tbody>
+</table>
+</div>
