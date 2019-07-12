@@ -1,8 +1,20 @@
-<h1>List of Products</h1>
+<style type="text/css">
+	
+	.ayo{
+		margin:3px;
+		background-color:white;
+		border: 1px solid black;
+		width: 100px;
+		padding: 3px;
+	}
+</style>
+
+<hr>
+<h1 style="text-align:center">List of Products</h1>
 
 <ul>
 	<% @products.each do |product| %>
-	<li ><%= link_to product.name, product_path(product) %></li>
+	<li class = "ayo"><%= link_to product.name, product_path(product) %></li>
 	<%= link_to 'Edit', edit_product_path(product) %>
 
 	<%= link_to 'Delete', product, method: :delete, data: { confirm: 'Are you sure'} %>

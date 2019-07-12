@@ -1,11 +1,44 @@
-<h1 style="text-align:center; color:red">Home</h1>
+<style type="text/css">
+	.abo{
+		
+		height:600px;
+		background-image:url("https://10az10.ir/upload/post/news/0/9-thai-food.jpg");
+	}
+
+	#varazdat{
+		border:1px solid white;
+		
+	}
+
+	.artur{
+		width: 100px;
+		height:100px;
+		
+	}
+
+	.ahaaaa {
+		margin:auto;
+		display: inline-block;
+	}
+
+</style>
 <hr>
-<h2 style="text-align:center; color:red">Welcome to Perfection</h2>
+<div class = "ahaaaa">
+<img src="https://cdn0.iconfinder.com/data/icons/restaurant-service-business/64/web-website-online-order-food-512.png" class="artur">
+<br>
+<h3>Welcome to Ruby On Rails Fast Food</h3>
+</div>
+<hr>
+
+<div class="abo">
+	
+</div>
+
 <hr>
 
 <div class="row">
 	<% @products.each do |product|%>
-		<div class="col-lg-4 col-md-6 mb-4">
+		<div class="col-lg-4 col-md-6 mb-4" id="varazdat">
 			<div class="card h-100">
 				<%= image_tag(product.image, class: "card-img-top",  style: "width:100px; height:150px; margin:auto;") unless product.image.nil? %>
 				<div class="card-body">
@@ -21,4 +54,9 @@
 		</div>
 	<% end %>
 </div>
+
+
+
+<hr>
+<hr>
 
